@@ -1,4 +1,4 @@
-# 快速入门
+#快速入门
 
 ## 快速初始化项目
 ---
@@ -10,7 +10,7 @@ $ cd egg-example
 $ npm i
 ```
 
-启用项目：
+## 启用项目：
 ```
 $ npm run dev
 $ open localhost:7001
@@ -52,7 +52,7 @@ $ npm run dev
 $ open localhost:7001
 ```
 
- 静态资源
+## 静态资源
 
 Egg 内置了 static 插件，线上环境建议部署到 CDN，无需该插件。
 
@@ -70,17 +70,17 @@ app/public
 
 ```
 
- 模板渲染
+## 模板渲染
 
  ```
  $ npm i egg-view-nunjucks --save
  ```
 
- 开启插件：
+## 开启插件：
 
  ```js
  // config/plugin.js
-config.nunjucks = {
+exports.nunjucks = {
   enable: true,
   package: 'egg-view-nunjucks'
 };
@@ -88,7 +88,7 @@ config.nunjucks = {
 
  ```js
  // config/config.default.js
-exports.view = {
+config.view = {
   defaultViewEngine: 'nunjucks',
   mapping: {
     '.tpl': 'nunjucks',
