@@ -10,11 +10,11 @@
 </head>
 <body>
 	<div class="news-view view">
-		<% for item in list %>
+		{% for item in list %}
 			<div class="item">
-				<a href="{{ item.url }}">{{item.title}}</a>
+				<a href="{{ item.url }}">{{item.title}}---{{ helper.relativeTime(item.time) }}</a>
 			</div>
-		<% endfor %>
+		{% endfor %}
 	</div>
 </body>
 </html>

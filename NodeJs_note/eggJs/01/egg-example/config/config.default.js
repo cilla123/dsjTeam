@@ -7,13 +7,18 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1495529868204_6979';
 
   // add your config here
+    config.view = {
+        defaultViewEngine: 'nunjucks',
+        mapping: {
+            '.tpl': 'nunjucks',
+        }
+    }
+
+    config.news = {
+        pageSize: 10,
+        serverUrl: 'https://hacker-news.firebaseio.com/v0',
+    }
 
   return config;
 };
 
-exports.view = {
-    defaultViewEngine: 'nunjucks',
-    mapping: {
-        '.tpl': 'nunjucks',
-    }
-};

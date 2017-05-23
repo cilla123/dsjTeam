@@ -6,3 +6,4 @@ exports.nunjucks = {
     enbale: true,
     package: 'egg-view-nunjucks'
 };
+
